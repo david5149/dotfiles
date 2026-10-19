@@ -12,7 +12,7 @@
       "source": "manual",
       "updated_at": 1792162817
     },
-    "avatarPath": "/home/david/Pictures/pfp/b6403c17869b9472ce1382eaac4f53cc.jpg",
+    "avatarPath": "~/Pictures/pfp/b6403c17869b9472ce1382eaac4f53cc.jpg",
     "muteSfx": true,
     "sfxVolume": 100,
     "screenshotCaptureOnRelease": false,
@@ -26,7 +26,7 @@
     "horizontalPosition": 98,
     "verticalPosition": 8,
     "sound": true,
-    "soundFile": "/home/david/.local/share/serpantinum/src/assets/sounds/notifications/Botanica.wav",
+    "soundFile": "~/.local/share/serpantinum/src/assets/sounds/notifications/Botanica.wav",
     "showEmptyGraphic": true,
     "rightClickClose": true
   },
