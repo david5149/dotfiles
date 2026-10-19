@@ -1,0 +1,5 @@
+google-chrome
+wl-gammarelay-rs
+yay
+yay-debug
+zsh-theme-powerlevel10k-git
