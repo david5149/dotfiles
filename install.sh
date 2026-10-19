@@ -29,7 +29,7 @@ for path in \
 done
 
 # Install official repository packages.
-sudo pacman -S --needed curl git base-devel
+sudo pacman -Syu --needed curl git base-devel
 sudo pacman -S --needed - <"$DOTFILES_DIR/packages-official.txt"
 
 # Install yay if necessary.
@@ -41,11 +41,33 @@ if ! command -v yay >/dev/null 2>&1; then
 fi
 
 # Install AUR packages, excluding yay and its debug package.
-grep -Ev '^(yay|yay-debug)$' "$DOTFILES_DIR/packages-aur.txt" |
-  xargs -r yay -S --needed
+mapfile -t AUR_PACKAGES < <(
+  grep -Ev '^(yay|yay-debug)$' "$DOTFILES_DIR/packages-aur.txt"
+)
+
+if ((${#AUR_PACKAGES[@]})); then
+  yay -S --needed "${AUR_PACKAGES[@]}"
+fi
 
 # Install Serpantinum using its official interactive installer.
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ilyamiro/serpantinum/master/install/install.sh)"
+# Download the official Serpantinum installer for inspection.
+INSTALLER="$(mktemp)"
+trap 'rm -f "$INSTALLER"' EXIT
+
+curl -fsSL \
+  https://raw.githubusercontent.com/ilyamiro/serpantinum/master/install/install.sh \
+  -o "$INSTALLER"
+
+echo "Serpantinum installer downloaded to: $INSTALLER"
+echo "Review it before running it."
+read -r -p "Run the Serpantinum installer? [y/N] " run_installer
+
+if [[ "$run_installer" =~ ^[Yy]$ ]]; then
+  bash "$INSTALLER"
+fi
+
+rm -f "$INSTALLER"
+trap - EXIT
 
 # Restore configs AFTER installing Serpantinum.
 mkdir -p "$HOME/.config"
