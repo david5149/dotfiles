@@ -1,0 +1,149 @@
+{
+  "general": {
+    "language": "en",
+    "location": {
+      "latitude": 34.84216,
+      "longitude": 0.142916,
+      "city": "Saida",
+      "region": "Saida",
+      "country_name": "Algeria",
+      "country_code": "DZ",
+      "timezone": "Africa/Algiers",
+      "source": "manual",
+      "updated_at": 1792162817
+    },
+    "avatarPath": "/home/david/Pictures/pfp/b6403c17869b9472ce1382eaac4f53cc.jpg",
+    "muteSfx": true,
+    "sfxVolume": 100,
+    "screenshotCaptureOnRelease": false,
+    "quickactions": true,
+    "weatherInterval": 15,
+    "weatherUnit": "metric"
+  },
+  "notifications": {
+    "dnd": true,
+    "position": "top right",
+    "horizontalPosition": 98,
+    "verticalPosition": 8,
+    "sound": true,
+    "soundFile": "/home/david/.local/share/serpantinum/src/assets/sounds/notifications/Botanica.wav",
+    "showEmptyGraphic": true,
+    "rightClickClose": true
+  },
+  "bar": {
+    "position": "top",
+    "width": 100,
+    "height": 40,
+    "opacity": 100,
+    "style": "modular",
+    "distinctPills": false,
+    "centerByEdges": true,
+    "time": {
+      "format": "HH:mm:ss"
+    },
+    "autohide": false,
+    "autohideTimeout": 1000,
+    "groupColors": {
+      "g_kb": "#83d3e3"
+    },
+    "modules": {
+      "left": [
+        "left",
+        "workspaces",
+        "media"
+      ],
+      "center": [
+        "timedate",
+        "info",
+        "weather"
+      ],
+      "right": [
+        [
+          "tray",
+          "kb",
+          "wifi",
+          "bt",
+          "vol",
+          "sysmon",
+          "bat"
+        ]
+      ]
+    },
+    "timeStyle": "classic",
+    "workspacesStyle": "pills",
+    "menuStyle": "icon",
+    "visAlignment": "center",
+    "visContinuous": false,
+    "sysmonStyle": "circle",
+    "sysmonStats": [
+      "cpu",
+      "ram",
+      "temp"
+    ],
+    "wifiStyle": "text",
+    "volStyle": "text",
+    "btStyle": "button",
+    "kbStyle": "text",
+    "mediaInfoMode": "duration",
+    "mediaWidth": 199,
+    "mediaShowIcon": true
+  },
+  "launcher": {
+    "position": "bottom",
+    "width": 580,
+    "itemCount": 6,
+    "terminalCommand": "kitty -e",
+    "smartRanking": true
+  },
+  "idle": {
+    "manualInhibit": false,
+    "caffeineStartTime": 0,
+    "caffeineEndTime": 0
+  },
+  "theme": {
+    "fontFamily": "Adwaita Mono",
+    "borderRadius": 8,
+    "activePreset": "Matugen",
+    "matugen": true,
+    "colors": {
+      "base": "#181616",
+      "blue": "#658594",
+      "crust": "#0d0c0c",
+      "green": "#8a9a86",
+      "mantle": "#121010",
+      "maroon": "#b4637a",
+      "mauve": "#938aa9",
+      "overlay0": "#625e5a",
+      "overlay1": "#7a8382",
+      "overlay2": "#8a8980",
+      "peach": "#e6238b",
+      "pink": "#d27e99",
+      "red": "#c4746e",
+      "sapphire": "#7aa89f",
+      "subtext0": "#7a8382",
+      "subtext1": "#a6a69c",
+      "surface0": "#221f22",
+      "surface1": "#2a282a",
+      "surface2": "#363646",
+      "teal": "#7aa89f",
+      "text": "#c5c9c5",
+      "yellow": "#c84053"
+    },
+    "blurBackground": false,
+    "blurStyle": "blur"
+  },
+  "inputs": {
+    "passwordReveal": false
+  },
+  "display": {
+    "monitors": {
+      "HDMI-A-1": {
+        "enabled": false
+      },
+      "VGA-1": {
+        "enabled": false
+      }
+    }
+  }
+}
+
